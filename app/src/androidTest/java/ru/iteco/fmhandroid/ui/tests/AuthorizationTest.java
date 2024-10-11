@@ -37,29 +37,29 @@ public class AuthorizationTest {
             "Something went wrong. Try again later.";
     private static final String toastMessageEmpty =
             "Login and password cannot be empty";
+
     PageObjectBefore pageObjectBefore = new PageObjectBefore();
     PageObjectAuthorization pageObjectAuthorization = new PageObjectAuthorization();
-
 
     @Test
     public void validLoginValidPassword() {
 
         pageObjectAuthorization.authorization(DataHelper.getValidLogin(), DataHelper.getValidPassword());
-        onView(withText("News")).check(matches(isDisplayed()));
-    }
-
-    @Test
-    public void invalidLoginValidPassword() {
-
-        pageObjectAuthorization.authorization(DataHelper.getInvalidLogin(), DataHelper.getValidPassword());
-        onView(withText(toastMessage)).inRoot(new ToastMatcher())
-                .check(matches(isDisplayed()));
+        onView(withText("All news")).check(matches(isDisplayed()));
     }
 
     @Test
     public void validLoginInvalidPassword() {
 
         pageObjectAuthorization.authorization(DataHelper.getValidLogin(), DataHelper.getInvalidPassword());
+        onView(withText(toastMessage)).inRoot(new ToastMatcher())
+                .check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void invalidLoginValidPassword() {
+
+        pageObjectAuthorization.authorization(DataHelper.getInvalidLogin(), DataHelper.getValidPassword());
         onView(withText(toastMessage)).inRoot(new ToastMatcher())
                 .check(matches(isDisplayed()));
     }
