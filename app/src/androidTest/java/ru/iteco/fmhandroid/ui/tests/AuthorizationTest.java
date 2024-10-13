@@ -45,7 +45,7 @@ public class AuthorizationTest {
     public void validLoginValidPassword() {
 
         pageObjectAuthorization.authorization(DataHelper.getValidLogin(), DataHelper.getValidPassword());
-        onView(withText("All news")).check(matches(isDisplayed()));
+        onView(withText("News")).check(matches(isDisplayed()));
     }
 
     @Test
