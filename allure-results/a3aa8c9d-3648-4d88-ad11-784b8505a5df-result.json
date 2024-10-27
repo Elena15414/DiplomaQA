@@ -1,7 +1,7 @@
 {
-    "name": "pageAboutOption1",
-    "start": 1728814077618,
-    "stop": 1728814086576,
+    "name": "pageQuoteTopicPageNews",
+    "start": 1730044360812,
+    "stop": 1730044371927,
     "stage": "finished",
     "description": null,
     "descriptionHtml": null,
@@ -13,9 +13,9 @@
     ],
     "parameters": [
     ],
-    "uuid": "1d334cec-47b0-492d-a45e-3c26f7cfcd85",
-    "historyId": "e341b82c1eac466ec0a8a21011d2121",
-    "fullName": "ru.iteco.fmhandroid.ui.tests.AboutPrivacyPolicyAndTermsUseTest.pageAboutOption1",
+    "uuid": "a3aa8c9d-3648-4d88-ad11-784b8505a5df",
+    "historyId": "d4b2baf010acaa774dbd0a649e64d7a1",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.ApplicationNavigationTest.pageQuoteTopicPageNews",
     "labels": [
         {
             "name": "package",
@@ -23,15 +23,15 @@
         },
         {
             "name": "testClass",
-            "value": "ru.iteco.fmhandroid.ui.tests.AboutPrivacyPolicyAndTermsUseTest"
+            "value": "ru.iteco.fmhandroid.ui.tests.ApplicationNavigationTest"
         },
         {
             "name": "testMethod",
-            "value": "pageAboutOption1"
+            "value": "pageQuoteTopicPageNews"
         },
         {
             "name": "suite",
-            "value": "ru.iteco.fmhandroid.ui.tests.AboutPrivacyPolicyAndTermsUseTest"
+            "value": "ru.iteco.fmhandroid.ui.tests.ApplicationNavigationTest"
         },
         {
             "name": "host",
@@ -39,7 +39,7 @@
         },
         {
             "name": "thread",
-            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(646)"
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(816)"
         },
         {
             "name": "framework",

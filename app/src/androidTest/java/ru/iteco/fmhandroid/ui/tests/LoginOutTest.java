@@ -5,6 +5,7 @@ import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
+import static ru.iteco.fmhandroid.ui.data.DataHelper.toastMessageAuthorization;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.filters.LargeTest;
 
@@ -24,17 +25,17 @@ public class LoginOutTest {
     @Rule
     public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
             new ActivityScenarioRule<>(AppActivity.class);
+    PageObjectBefore pageObjectBefore = new PageObjectBefore();
 
     @Before
     public void startPage() {
         pageObjectBefore.loginIn();
     }
-    PageObjectBefore pageObjectBefore = new PageObjectBefore();
 
     @Test
-    public void shouldLogout(){
+    public void shouldLogout() {
 
         pageObjectBefore.loginOut();
-        onView(withText("Authorization")).check(matches(isDisplayed()));
+        onView(withText(toastMessageAuthorization)).check(matches(isDisplayed()));
     }
 }

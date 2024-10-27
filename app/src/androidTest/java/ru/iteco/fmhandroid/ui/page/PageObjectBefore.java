@@ -20,14 +20,14 @@ public class PageObjectBefore {
         } catch (Exception e){
         }
     }
-
     public void loginIn() {
 
         try {
             onView(isRoot()).perform(waitDisplayed(R.id.enter_button, 5000));
-            pageObjectAuthorization.authorization(DataHelper.getValidLogin(), DataHelper.getValidPassword());
+            pageObjectAuthorization.validLoginAndPasswordAuthorization(DataHelper.validLoginAndPassword());
             onView(isRoot()).perform(waitDisplayed(R.id.authorization_image_button, 1000));
         } catch (Exception e){
         }
     }
+
 }
